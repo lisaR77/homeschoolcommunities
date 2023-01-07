@@ -1,0 +1,120 @@
+@import "src/Assets/Scss/variables";
+.completeFormSectionWrapper{
+  background-color: #ffffff;
+  padding: 80px;
+
+}
+.phaseHeadingWrapper{
+  font-family: Inter-Regular ;
+  font-size: 20px;
+  color: #101729;
+}
+
+.firstFormSectionWrapper{
+
+}
+.ListSectionWrapper{
+
+
+  ul li{
+    list-style: none;
+    font-family: Inter-Regular ;
+    font-size: 14px;
+    padding-top: 20px;
+    color: #101729;
+  }
+  ul li::before {
+    content: "\2022";
+    color: #47AF22;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+
+}
+
+
+.checksApplyWrapperStyle{
+  margin-top: 40px;
+  margin-left: 20px;
+
+  & h4{
+    font-family: Inter-Regular ;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .completeFormSectionWrapper{
+    padding: 40px;
+
+  }
+
+
+  .checksApplyWrapperStyle{
+    margin-top: 40px;
+    margin-left: 0px;
+
+    & h4{
+      font-family: Inter-Regular ;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  .phaseHeadingWrapper{
+    font-family: Inter-Regular ;
+    font-size: 14px;
+    color: #101729;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .completeFormSectionWrapper{
+    //background-color: red;
+    padding: 20px;
+
+  }
+
+
+  .checksApplyWrapperStyle{
+    margin-top: 30px;
+    margin-left: 0px;
+
+  }
+  .phaseHeadingWrapper{
+    font-family: Inter-Regular ;
+    font-size: 14px;
+    color: #101729;
+  }
+
+  .ListSectionWrapper{
+margin-left: -20px;
+
+    ul li{
+      list-style: none;
+      font-family: Inter-Regular ;
+      font-size: 12px;
+      padding-top: 20px;
+      color: #101729;
+    }
+    ul li::before {
+      content: "\2022";
+      color: #47AF22;
+      font-size: 20px;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+
+  }
+
+}

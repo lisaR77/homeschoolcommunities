@@ -2,5 +2,107 @@
 
 
 .landingMainOuterWrapper {
+  height: 600px;
+  background-image: url('../../Assets/Images/banner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landingBannerContentWrapper{
+  //background: red;
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  & h3{
+    font-size: 43px;
+    font-family: 'Suwannaphum-Regular';
+    color: #ffffff;
+    font-weight: 500;
+
+
+    & span{
+      font-size: 43px;
+      font-family: 'Suwannaphum-Bold';
+      font-weight: bold;
+    }
+  }
+  & p{
+    font-size: 22px;
+    font-family: "Inter-Regular";
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+
+
+
+//Featured Rentals Section Styling Start
+
+.featuredRentalSectionWrapper{
+  background: #ffffff;
+  padding: 40px;
+  border: 2px solid black;
+}
+
+.featuredRentalContentWrapper{
+  width: 100%;
+  text-align: center;
+
+
+  & h2{
+    font-size: 40px;
+    font-family: 'Inter-Regular';
+    font-weight: 600;
+    color: #FFC107;
+  }
+  & p{
+    font-size: 20px;
+    font-family: "Times New Roman";
+    font-weight: 700;
+    color: #C28A60;
+  }
+
+}
+
+
+.rentalCardsFlexWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .featuredRentalSectionWrapper{
+    background: #ffffff;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  .rentalCardsFlexWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px
+  }
+
+
 
 }
