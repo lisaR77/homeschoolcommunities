@@ -133,7 +133,7 @@ const FirstFormComponent = () => {
 
                                     <div>
                                         <button className='buttonSubmitStyle' type="submit">
-                                            I am interested in building & selling homeschool communities
+                                            I am interested in building homeschool communities
                                         </button>
                                     </div>
 

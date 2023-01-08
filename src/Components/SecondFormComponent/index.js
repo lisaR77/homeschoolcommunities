@@ -65,7 +65,7 @@ const SecondFormComponent = () => {
                                     Check all that apply:
                                 </h4>
 
-                                <FormControlLabel control={<Checkbox id='home_builder' onChange={formik.handleChange} />} label="I am a realtor and plan to tell my clients about homeschool communities " /> <br/>
+                                <FormControlLabel control={<Checkbox id='home_builder' onChange={formik.handleChange} />} label="I am a realtor and plan to tell my clients about homeschool communities a period " /> <br/>
 
 
                                 <div className='formSectionStyleWrapper'>

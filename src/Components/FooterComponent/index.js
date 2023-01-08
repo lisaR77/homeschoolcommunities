@@ -18,14 +18,14 @@ const FooterComponent = () => {
 
                 <div className='footerContentPointerWrapper'>
                     <div className='footerIconWrapper'>
-                        <ImPhone size={22} />
+                        <ImPhone size={22} color={'#455467'} />
                         <p>
                             +801 - 941-2815
                         </p>
 
                     </div>
                     <div className='footerIconWrapper'>
-                        <FaEnvelope size={22} />
+                        <FaEnvelope size={22} color={'#455467'} />
                         <p>
                             hautestyle@gmail.com
                         </p>

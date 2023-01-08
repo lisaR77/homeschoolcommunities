@@ -5,6 +5,8 @@ import CompleteFormSectionComponent from "../../Components/CompleteFormSectionCo
 import rental1 from '../../Assets/Images/rental1.png'
 import rental2 from '../../Assets/Images/rental2.png'
 import rental3 from '../../Assets/Images/rental3.png'
+import sliderImage from '../../Assets/Images/slideImage.png'
+import ToggleComponent from "../../Components/ToggleComponent";
 const LandingPageScreen = () => {
     return(
         <div>
@@ -14,6 +16,37 @@ const LandingPageScreen = () => {
                     Building homeschool communities
                 </p>
                 <h3>DRIVING  <span> CHANGE </span>  IN <span> EDUCATION </span></h3>
+
+            </div>
+
+
+
+            <div className='sliderToggleWrapper'>
+                <div className='toggleCoupleFlex'>
+                <div>
+                    <ToggleComponent detail={'I advocate for homeschool communities'} />
+                </div>
+                <div>
+                    <ToggleComponent detail={'I want this in my existing community'} />
+                </div>
+                <div>
+                    <ToggleComponent detail={'I want to build this'} />
+                </div>
+                </div>
+                <div className='centerSlideImageWrapper'>
+                    <img src={sliderImage} alt=""/>
+                </div>
+                <div className='toggleCoupleFlex'>
+                <div>
+                    <ToggleComponent detail={'I want to live here'} />
+                </div>
+                <div>
+                    <ToggleComponent detail={'I want to serve here'} />
+                </div>
+                <div>
+                    <ToggleComponent detail={'I will tell my clients about it'} />
+                </div>
+                </div>
 
             </div>
 

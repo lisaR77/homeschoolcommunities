@@ -14,7 +14,7 @@ const CompleteFormSectionComponent = () => {
             <Row>
                 <Col span={24}>
                     <p className='phaseHeadingWrapper'>
-                        *Phase 1 is subject to change to a homeschool community in Washington country.
+                        *Phase 1 is subject to change to a homeschool community in Washington county.
                     </p>
 
                 </Col>
@@ -67,7 +67,7 @@ const CompleteFormSectionComponent = () => {
 
                                 </li>
                                 <li>
-                                    I am a skilled parent or  teacher, and am interested in presenting parent workshops in the auditorium and welcome income opportunity.
+                                    I am a skilled parent or teacher, and am interested in presenting parent workshops in the auditorium and welcome income opportunity.
 
                                 </li>
                                 <li>

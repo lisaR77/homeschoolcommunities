@@ -1,0 +1,112 @@
+@import "src/Assets/Scss/variables";
+.toggleWrapperStyle{
+//background-color: red;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 120px;
+
+  & .ant-switch.ant-switch-checked {
+    //background-color: #FFC107;
+    background: none!important;
+    border: 1px solid #FFC107!important;
+
+  }
+  & .ant-switch.ant-switch-checked:before{
+    opacity: 0!important;
+  }
+
+  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-handle{
+    top:1px!important;
+  }
+  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-handle::before{
+    background: #BBBDC0!important;
+  }
+  :where(.css-dev-only-do-not-override-k83k30).ant-switch.ant-switch-checked .ant-switch-handle::before{
+    background: white!important;
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0, #FFC107, #FFC107 100%)!important;
+  }
+
+  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-checked, :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-unchecked{
+    color: #FFC107!important;
+    margin-top: -1px!important;
+  }
+  & .ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
+    //background-color: #FFC107;
+    background: transparent!important;
+    border: 1px solid #FFC107!important;
+  }
+
+  & .ant-switch .ant-switch-checked:not(.ant-switch-disabled) {
+    background-color: gray!important;
+  }
+
+  & .ant-switch:hover:not(.ant-switch-disabled) {
+    background-color: none!important;
+    border: 1px solid #BBBDC0!important;
+  }
+
+  & .ant-switch {
+    //background-color: #BBBDC0;
+    border: 1px solid #BBBDC0!important;
+  }
+
+
+}
+.spanToggleNumberStyle{
+  font-size: 20px;
+  font-family: Inter-Regular;
+  color: #FFC107;
+}
+
+.paraToggleStyle{
+  font-size: 15px;
+  text-align: center;
+  font-family: Inter-Regular;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 10px;
+  height: 50px;
+  line-height: 16px;
+}
+
+
+@media screen and (max-width: 999px) {
+  .toggleWrapperStyle{
+
+    width: 120px;
+  }
+
+  .paraToggleStyle{
+    font-size: 13px;
+
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 380px) {
+  .toggleWrapperStyle{
+    width: 220px;
+  }
+
+  .paraToggleStyle{
+    font-size: 16px;
+
+  }
+  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-handle{
+    top:0px!important;
+  }
+
+  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-checked, :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-unchecked{
+    color: #FFC107!important;
+    margin-top: -1px!important;
+  }
+
+
+
+}
