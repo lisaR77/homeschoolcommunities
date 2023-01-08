@@ -1,0 +1,131 @@
+.checksApplyWrapperStyle{
+  background-color: transparent;
+
+}
+
+.formSectionStyleWrapper{
+  margin-top: 50px;
+}
+.rowFormStyle{
+width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+
+  & .inputWrapperMarginStyle {
+    margin: 10px;
+    width: 100%;
+  }
+
+  & .inputWrapperMarginStyle input{
+    padding: 15px;
+    margin: 0px;
+    width: 100%;
+    border: none;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    text-align: center;
+    font-family: "Times New Roman";
+  }
+
+  & .inputWrapperMarginStyle input::placeholder{
+    font-size: 14px;
+    font-family: "Times New Roman";
+  }
+  & .inputWrapperMarginStyle input:hover,
+  input:hover,
+  textarea:active,
+  input:active,
+  textarea:focus,
+  input:focus,
+  button:focus,
+  button:active,
+  button:hover,
+  label:focus,
+  .btn:active,
+  .btn.active
+  {
+    outline:0px !important;
+    -webkit-appearance:none;
+
+  }
+
+}
+
+.errorColorStyle{
+  font-size: 12px;
+  text-align: left;
+  font-family: Inter-Bold;
+  color: #b00707;
+  margin-top: 10px;
+}
+
+
+.buttonSubmitStyle{
+  margin-top: 50px;
+  background-color: #FFC107;
+  box-shadow: 1px 15px 30px rgba(132, 132, 132, 0.4);
+  color: #ffffff;
+  width: 100%;
+  padding: 30px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  font-family: Inter-Bold;
+
+  cursor: pointer;
+
+
+
+
+}
+
+
+.MuiCheckbox-colorSecondary.Mui-checked{
+  color: orange!important;
+}
+
+@media screen and (max-width: 600px) {
+  .formSectionStyleWrapper{
+    margin-top: 30px;
+  }
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .formSectionStyleWrapper{
+    margin-top: 30px;
+  }
+
+  .rowFormStyle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+
+
+  .buttonSubmitStyle{
+    margin-top: 50px;
+    background-color: #FFC107;
+    box-shadow: 1px 15px 30px rgba(132, 132, 132, 0.4);
+    color: #ffffff;
+    width: 100%;
+    padding: 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+
+
+
+
+  }
+
+}

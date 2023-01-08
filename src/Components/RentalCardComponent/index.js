@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.scss'
-import rental1 from '../../Assets/Images/rental1.png'
+
 import classRoomImage from '../../Assets/Images/classroom.svg'
 import bathroomImage from '../../Assets/Images/bathroom.svg'
 import studentImage from '../../Assets/Images/students.svg'
 
-const RentalCardComponent = ({rentalHeading}) => {
+const RentalCardComponent = ({rentalHeading, imageRental}) => {
     return(
-        <section className='rentalCardComponentSection'>
-            <div className='rentalImageWrapper'>
+        <section className='rentalCardComponentSection' >
+            <div className={`rentalImageWrapper`}  style={{backgroundImage: `url(${imageRental})`}}>
                <p>
                    Concept
                </p>
@@ -40,7 +40,7 @@ const RentalCardComponent = ({rentalHeading}) => {
                 <div className='rentalDetailContentWrapper'>
                     <img src={studentImage} alt=""/>
                     <p>
-                        20 Students per hour
+                        20 Students <br/> per hour
                     </p>
 
                 </div>

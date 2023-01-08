@@ -8,7 +8,7 @@ import homeBuilderApi from "../../API";
 import { useToasts } from 'react-toast-notifications';
 
 
-const FirstFormComponent = () => {
+const ThirdFormComponent = () => {
     const {addToast}  = useToasts();
 
     const validationSchema = yup.object({
@@ -16,12 +16,12 @@ const FirstFormComponent = () => {
             .string('Please Enter Email ')
             .email('Please Enter Correct Email')
             .required('Email is required'),
-        company_name: yup
+        first_name: yup
             .string('Please Enter Company Name ')
-            .required('Company Name is required'),
-        contact_name: yup
+            .required('First Name is required'),
+        last_name: yup
             .string('Please Enter Contact Name ')
-            .required('Contact Name is required'),
+            .required('Last Name is required'),
     });
 
 
@@ -29,32 +29,19 @@ const FirstFormComponent = () => {
 
     const formik = useFormik({
         initialValues: {
-            home_builder: false,
+            live_home_school: false,
             commercial_builder: false,
-            company_name: '',
-            contact_name: '',
+            existing_community: false,
+            advocate_home_school: false,
+            first_name: '',
+            last_name: '',
             email: '',
-            phone: '',
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            if(values.phone === ""){
-                debugger
-                const body = {
-                    home_builder: values.home_builder,
-                    commercial_builder: values.commercial_builder,
-                    company_name: values.company_name,
-                    contact_name: values.contact_name,
-                    email: values.email,
-                }
-                homeBuilderApi(body, addToast);
-            }else{
                 debugger
                 homeBuilderApi(values, addToast);
-            }
 
-
-            // homeBuilderApi(values)
         },
     });
     return(
@@ -65,35 +52,38 @@ const FirstFormComponent = () => {
                                     Check all that apply:
                                 </h4>
 
-                                <FormControlLabel control={<Checkbox id='home_builder' onChange={formik.handleChange} />} label="I am a homebuilder." /> <br/>
+                                <FormControlLabel control={<Checkbox id='home_builder' onChange={formik.handleChange} />} label="I would like to live in a homeschool community." /> <br/>
 
-                                <FormControlLabel control={<Checkbox id='commercial_builder' onChange={formik.handleChange} />} label="I am a commercial builder." />
+                                <FormControlLabel control={<Checkbox id='commercial_builder' onChange={formik.handleChange} />} label="I am a teacher or skilled parent and am interested in serving a homeschool community." />
+
+                                <FormControlLabel control={<Checkbox id='commercial_builder' onChange={formik.handleChange} />} label="I wish we had something like this in our existing community." />
+
+                                <FormControlLabel control={<Checkbox id='commercial_builder' onChange={formik.handleChange} />} label="I advocate for homeschool communities." />
 
                                 <div className='formSectionStyleWrapper'>
-
 
                                 <div className='rowFormStyle'>
                                     <div className='inputWrapperMarginStyle'>
                                     <input
                                         type="text"
-                                        id='company_name'
-                                        placeholder='COMPANY NAME'
-                                        value={formik.values.company_name}
+                                        id='first_name'
+                                        placeholder='FIRST NAME'
+                                        value={formik.values.first_name}
                                         onChange={formik.handleChange}
 
                                     />
-                                    <div className='errorColorStyle'>{formik?.errors.company_name}</div>
+                                    <div className='errorColorStyle'>{formik?.errors.first_name}</div>
                                     </div>
                                     <div className='inputWrapperMarginStyle'>
                                     <input
                                         type="text"
-                                        id='contact_name'
-                                        placeholder='CONTACT NAME'
-                                        value={formik.values.contact_name}
+                                        id='last_name'
+                                        placeholder='LAST NAME'
+                                        value={formik.values.last_name}
                                         onChange={formik.handleChange}
 
                                     />
-                                        <div className='errorColorStyle'>{formik?.errors.contact_name}</div>
+                                        <div className='errorColorStyle'>{formik?.errors.last_name}</div>
                                     </div>
 
                                 </div>
@@ -112,28 +102,14 @@ const FirstFormComponent = () => {
                                             <div className='errorColorStyle'>{formik?.errors.email}</div>
                                         </div>
 
-
                                     </div>
 
-                                    <div className='rowFormStyle'>
-                                        <div className='inputWrapperMarginStyle'>
-                                        <input
-                                            type="text"
-                                            id='phone'
-                                            placeholder='CONTACT NUMBER (OPTIONAL)'
-                                            value={formik.values.phone}
-                                            onChange={formik.handleChange}
-
-                                        />
-                                        </div>
-
-                                    </div>
 
 
 
                                     <div>
                                         <button className='buttonSubmitStyle' type="submit">
-                                            I am interested in building & selling homeschool communities
+                                            I am a homebuyer interested in living in a homeschool community
                                         </button>
                                     </div>
 
@@ -149,4 +125,4 @@ const FirstFormComponent = () => {
 
 }
 
-export default FirstFormComponent
+export default ThirdFormComponent

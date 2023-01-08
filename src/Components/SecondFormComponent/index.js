@@ -8,7 +8,7 @@ import homeBuilderApi from "../../API";
 import { useToasts } from 'react-toast-notifications';
 
 
-const FirstFormComponent = () => {
+const SecondFormComponent = () => {
     const {addToast}  = useToasts();
 
     const validationSchema = yup.object({
@@ -65,12 +65,10 @@ const FirstFormComponent = () => {
                                     Check all that apply:
                                 </h4>
 
-                                <FormControlLabel control={<Checkbox id='home_builder' onChange={formik.handleChange} />} label="I am a homebuilder." /> <br/>
+                                <FormControlLabel control={<Checkbox id='home_builder' onChange={formik.handleChange} />} label="I am a realtor and plan to tell my clients about homeschool communities " /> <br/>
 
-                                <FormControlLabel control={<Checkbox id='commercial_builder' onChange={formik.handleChange} />} label="I am a commercial builder." />
 
                                 <div className='formSectionStyleWrapper'>
-
 
                                 <div className='rowFormStyle'>
                                     <div className='inputWrapperMarginStyle'>
@@ -133,7 +131,7 @@ const FirstFormComponent = () => {
 
                                     <div>
                                         <button className='buttonSubmitStyle' type="submit">
-                                            I am interested in building & selling homeschool communities
+                                            I am a realtor interested in selling homes in a homeschool community
                                         </button>
                                     </div>
 
@@ -149,4 +147,4 @@ const FirstFormComponent = () => {
 
 }
 
-export default FirstFormComponent
+export default SecondFormComponent
