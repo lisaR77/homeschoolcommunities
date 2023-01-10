@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.scss'
 import {Col, Row} from 'antd'
 import { useFormik, ErrorMessage } from 'formik';
 import * as yup from "yup";
 import {Checkbox, FormControlLabel} from "@material-ui/core";
-import homeBuilderApi from "../../API";
+
 import { useToasts } from 'react-toast-notifications';
+import {RealtorBuilderApi} from "../../API";
 
 
 const SecondFormComponent = () => {
+    const [loading, setLoading]= useState(false);
+    const [checkedBox, setCheckedBox]= useState(false);
     const {addToast}  = useToasts();
 
     const validationSchema = yup.object({
@@ -18,9 +21,11 @@ const SecondFormComponent = () => {
             .required('Email is required'),
         company_name: yup
             .string('Please Enter Company Name ')
+            .min(3, 'Please Enter at least 3 letters')
             .required('Company Name is required'),
         contact_name: yup
             .string('Please Enter Contact Name ')
+            .min(3, 'Please Enter at least 3 letters')
             .required('Contact Name is required'),
     });
 
@@ -29,34 +34,48 @@ const SecondFormComponent = () => {
 
     const formik = useFormik({
         initialValues: {
-            home_builder: false,
-            commercial_builder: false,
             company_name: '',
             contact_name: '',
             email: '',
             phone: '',
         },
         validationSchema: validationSchema,
-        onSubmit: (values) => {
+        validateOnChange: false,
+        onSubmit: (values,{resetForm}) => {
             if(values.phone === ""){
                 debugger
+                if(!loading){
                 const body = {
-                    home_builder: values.home_builder,
-                    commercial_builder: values.commercial_builder,
+                    realtor: checkedBox,
                     company_name: values.company_name,
                     contact_name: values.contact_name,
                     email: values.email,
                 }
-                homeBuilderApi(body, addToast);
+                RealtorBuilderApi(body, addToast, resetForm, setLoading, setCheckedBox);
+                }
             }else{
                 debugger
-                homeBuilderApi(values, addToast);
+                if(!loading){
+                    const body = {
+                        realtor: checkedBox,
+                        company_name: values.company_name,
+                        contact_name: values.contact_name,
+                        email: values.email,
+                    }
+                    RealtorBuilderApi(body, addToast, resetForm, setLoading, setCheckedBox);
+                }
+
             }
 
 
             // homeBuilderApi(values)
         },
     });
+
+    const handleCheck = () => {
+        debugger
+        setCheckedBox(!checkedBox);
+    }
     return(
         <div>
                         <form onSubmit={formik.handleSubmit} >
@@ -65,7 +84,8 @@ const SecondFormComponent = () => {
                                     Check all that apply:
                                 </h4>
 
-                                <FormControlLabel control={<Checkbox id='home_builder' onChange={formik.handleChange} />} label="I am a realtor and plan to tell my clients about homeschool communities a period " /> <br/>
+                                {/*<FormControlLabel control={<Checkbox id='realtor' value={true} onChange={formik.handleChange} />} label="I am a realtor and plan to tell my clients about homeschool communities a period " /> <br/>*/}
+                                <FormControlLabel control={<Checkbox id='realtor' value={checkedBox} checked={checkedBox && checkedBox} onClick={handleCheck}  />} label="I am a realtor and plan to tell my clients about homeschool communities a period " /> <br/>
 
 
                                 <div className='formSectionStyleWrapper'>
@@ -131,7 +151,12 @@ const SecondFormComponent = () => {
 
                                     <div>
                                         <button className='buttonSubmitStyle' type="submit">
-                                            I am a realtor interested in selling homes in a homeschool community
+                                            {loading ? "loading..."
+                                                :
+                                                " I am a realtor interested in selling homes in a homeschool community"
+
+                                            }
+
                                         </button>
                                     </div>
 

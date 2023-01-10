@@ -1,0 +1,135 @@
+.livingComponentWrapper{
+  width: 350px;
+  //background: yellow;
+  padding: 40px;
+  flex-wrap: wrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.livingImageWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+
+}
+.livingImageWrapper img{
+  width: 70%;
+}
+
+.paraLiving{
+  font-size: 18px;
+  font-family: Inter-Regular;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1120px) {
+  .livingComponentWrapper{
+    width: 350px;
+    //background: yellow;
+    //border: 1px solid black;
+    padding: 10px;
+    flex-wrap: wrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+
+  }
+
+  .paraLiving{
+    font-size: 16px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+  }
+
+}
+
+
+@media screen and (max-width: 980px) {
+  .livingComponentWrapper{
+    width: 300px;
+    //background: yellow;
+    //border: 1px solid black;
+    padding: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+
+  .paraLiving{
+    font-size: 16px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+  }
+
+}
+
+
+
+
+
+@media screen and (max-width: 367px) {
+  .livingComponentWrapper{
+    width:100%;
+    //background: yellow;
+    //border: 1px solid black;
+    padding: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+
+  .paraLiving{
+    font-size: 14px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+  }
+
+  .livingImageWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+
+  }
+  .livingImageWrapper img{
+    width: 45%;
+  }
+
+}

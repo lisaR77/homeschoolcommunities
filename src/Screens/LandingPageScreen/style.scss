@@ -444,3 +444,380 @@
 
 }
 
+
+
+//Living Secton Styling Start
+
+.livingSectionWrapper{
+  background-image: radial-gradient(#003580 10%, #101729 50%, #101729);
+  padding: 40px;
+  padding-top: 100px;
+
+  & h3{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Inter-Bold;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color: #ffffff;
+
+  }
+}
+.livingComponentWrapperMain{
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+
+
+}
+
+
+@media screen and (max-width: 980px) {
+  .livingComponentWrapperMain{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .livingSectionWrapper {
+    background-image: radial-gradient(#003580 10%, #101729 50%, #101729);
+    padding: 40px;
+    padding-top: 100px;
+
+    & h3 {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: Inter-Bold;
+      text-align: center;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      color: #ffffff;
+
+    }
+  }
+}
+
+
+
+
+  @media screen and (max-width: 367px) {
+    .livingSectionWrapper {
+      background-image: radial-gradient(#003580 10%, #101729 50%, #101729);
+      padding: 20px;
+      padding-top: 50px;
+
+      & h3 {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Inter-Bold;
+        text-align: center;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        color: #ffffff;
+
+      }
+    }
+  }
+
+
+
+
+//Club Styling Start
+
+.clubSectionWrapper{
+  background: linear-gradient(90deg, #7B89A5, #CBDEED 60%);
+  padding: 60px;
+}
+
+.clubContentMainWrapper{
+  //background: red;
+  padding: 30px;
+
+  & h3{
+    font-size: 40px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    color: #ffffff;
+  }
+}
+
+.listsClubsWrapper{
+  margin-top: 50px;
+
+  ul li{
+    font-size: 18px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    line-height: 25px;
+    color: #ffffff;
+  }
+}
+
+
+.campusStyleWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 90px;
+}
+.campusImageStyle{
+  //background: red;
+  width: 80%;
+}
+.campusImageStyle img{
+  width: 80%;
+}
+
+.campusContentWrapper{
+
+}
+.campusContentWrapper h4{
+  font-size: 22px;
+  font-family: Inter-Regular;
+  font-weight: 600;
+  color: #ffffff;
+}
+.campusContentWrapper p{
+  font-size: 12px;
+  font-family: Inter-Regular;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+
+.clubImageWrapper{
+  padding: 50px;
+  //background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clubImageWrapper img{
+  width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+
+  .listsClubsWrapper{
+    margin-top: 50px;
+
+    ul li{
+      font-size: 22px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      line-height: 30px;
+      color: #ffffff;
+    }
+  }
+
+
+  .campusImageStyle{
+
+    width: 50%;
+  }
+  .campusImageStyle img{
+    width: 50%;
+  }
+
+  .clubImageWrapper{
+    padding: 40px;
+    //background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clubImageWrapper img{
+    width: 60%;
+  }
+
+}
+
+
+
+@media screen and (max-width: 672px) {
+  .clubSectionWrapper{
+    background: linear-gradient(90deg, #7B89A5, #CBDEED 60%);
+    padding: 20px;
+  }
+
+  .listsClubsWrapper{
+    margin-top: 50px;
+
+    ul li{
+      font-size: 18px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      line-height: 30px;
+      color: #ffffff;
+    }
+  }
+
+
+  .campusImageStyle{
+    width: 70%;
+  }
+  .campusImageStyle img{
+    width: 70%;
+  }
+
+  .clubImageWrapper{
+    padding: 40px;
+    //background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clubImageWrapper img{
+    width: 60%;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 490px) {
+  .clubContentMainWrapper{
+    //background: red;
+    padding: 10px;
+
+    & h3{
+      font-size: 28px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  }
+  .clubSectionWrapper{
+    background: linear-gradient(160deg, #7B89A5, #CBDEED 90%);
+    padding: 20px;
+  }
+
+  .listsClubsWrapper{
+    margin-top: 20px;
+
+    ul li{
+      font-size: 16px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      line-height: 30px;
+      color: #ffffff;
+      margin-left:-20px;
+    }
+  }
+
+
+  .campusImageStyle{
+    width: 90%;
+  }
+  .campusImageStyle img{
+    width: 90%;
+  }
+
+  .clubImageWrapper{
+    padding: 40px;
+    //background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clubImageWrapper img{
+    width: 80%;
+  }
+
+}
+
+
+
+@media screen and (max-width: 390px) {
+  .clubContentMainWrapper{
+    //background: red;
+    padding: 10px;
+
+    & h3{
+      font-size: 26px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  }
+  .clubSectionWrapper{
+    background: linear-gradient(160deg, #7B89A5, #CBDEED 90%);
+    padding: 20px;
+  }
+
+  .listsClubsWrapper{
+    margin-top: 20px;
+
+    ul li{
+      font-size: 14px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      line-height: 30px;
+      color: #ffffff;
+      margin-left:-20px;
+    }
+  }
+  .campusStyleWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .campusImageStyle{
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  .campusImageStyle img{
+    width: 70%;
+  }
+
+  .clubImageWrapper{
+    padding: 40px;
+    //background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clubImageWrapper img{
+    width: 80%;
+  }
+
+}
+
+
+
+
+//westle home school styling start
+
+.westleHomeSectionWrapper{
+  background: #ffffff;
+  padding: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+
+}
