@@ -128,3 +128,209 @@
   }
 }
 
+
+
+@media screen and (max-width: 1180px) {
+
+  .westleCardWrapper{
+    width: 260px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .centerWrap{
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+
+  .centerWrapWhite .locationWrapper{
+    & p{
+      color: #6D767E;
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+  }
+  .classesCotentWrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    padding-left:20px;
+    padding-right:20px;
+    //background: red;
+
+    & p{
+      font-size: 12px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      color: #455467;
+
+    }
+    & span{
+      font-size: 26px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      margin-top: -21px;
+      color: #455467;
+
+    }
+  }
+
+
+
+  .locationWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+
+    & p{
+      color: #6D767E;
+      margin-left: 10px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  
+}
+
+
+
+
+@media screen and (max-width: 1040px) {
+
+  .westleCardWrapper{
+    width: 260px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .centerWrap{
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+
+  .centerWrapWhite .locationWrapper{
+    & p{
+      color: #6D767E;
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+  }
+  .classesCotentWrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    padding-left:20px;
+    padding-right:20px;
+    //background: red;
+
+    & p{
+      font-size: 12px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      color: #455467;
+
+    }
+    & span{
+      font-size: 26px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      margin-top: -21px;
+      color: #455467;
+
+    }
+  }
+
+
+
+  .locationWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+
+    & p{
+      color: #6D767E;
+      margin-left: 10px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 880px) {
+
+  .westleCardWrapper{
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .centerWrap{
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+
+  .westleCardWrapper{
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .centerWrap{
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+}

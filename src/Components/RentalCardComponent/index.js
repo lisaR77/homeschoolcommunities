@@ -26,7 +26,7 @@ const RentalCardComponent = ({rentalHeading, imageRental}) => {
                 <div className='rentalDetailContentWrapper'>
                     <img src={classRoomImage} alt=""/>
                     <p>
-                        2 Classrooms
+                        7 Classrooms
                     </p>
 
                 </div>
@@ -40,7 +40,7 @@ const RentalCardComponent = ({rentalHeading, imageRental}) => {
                 <div className='rentalDetailContentWrapper'>
                     <img src={studentImage} alt=""/>
                     <p>
-                        20 Students <br/> per hour
+                        45 Students <br/> per hour
                     </p>
 
                 </div>

@@ -1,0 +1,280 @@
+@import "../../Assets/Scss/variables";
+
+.friendlyCardWrapperStyle{
+  width: 280px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.friendlyTopWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & h3{
+    font-size: 25px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    text-align: center;
+    color: #6D767E;
+  }
+  & p{
+    font-size: 18px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    text-align: center;
+    color: #999B9E;
+  }
+
+}
+
+.friendlyCenterWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+
+  & span{
+    font-size: 18px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    text-align: center;
+    color: #003580;
+    //padding:2px;
+  }
+
+  & .campusFriendlyHeading{
+    font-size: 18px;
+    font-family: Inter-Bold;
+    font-weight: bold;
+    text-align: center;
+    color: #003580;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  & .campusAddressFriendly{
+    font-size: 20px;
+    font-family: Inter-Regular;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+    margin-top: 20px;
+  }
+}
+
+.targetImageWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & img{
+    width: 70%;
+  }
+}
+
+.friendlyButtonWrapper{
+  background: #C28A60;
+  width: 100%;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  font-family: Inter-Regular;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .friendlyCardWrapperStyle{
+    width: 280px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .friendlyTopWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & h3{
+      font-size: 20px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #6D767E;
+    }
+    & p{
+      font-size: 16px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #999B9E;
+    }
+
+  }
+
+  .friendlyCenterWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+    & span{
+      font-size: 16px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #003580;
+      //padding:2px;
+    }
+
+    & .campusFriendlyHeading{
+      font-size: 16px;
+      font-family: Inter-Bold;
+      font-weight: bold;
+      text-align: center;
+      color: #003580;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+    & .campusAddressFriendly{
+      font-size: 16px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #000;
+      margin-top: 20px;
+    }
+  }
+  .targetImageWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & img{
+      width: 50%;
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 330px) {
+  .friendlyCardWrapperStyle{
+    width: 240px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .friendlyTopWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & h3{
+      font-size: 16px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #6D767E;
+    }
+    & p{
+      font-size: 14px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #999B9E;
+    }
+
+  }
+
+  .friendlyCenterWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+    & span{
+      font-size: 14px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #003580;
+      //padding:2px;
+    }
+
+    & .campusFriendlyHeading{
+      font-size: 14px;
+      font-family: Inter-Bold;
+      font-weight: bold;
+      text-align: center;
+      color: #003580;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+    & .campusAddressFriendly{
+      font-size: 14px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #000;
+      margin-top: 20px;
+    }
+  }
+  .targetImageWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & img{
+      width: 50%;
+    }
+  }
+
+
+}

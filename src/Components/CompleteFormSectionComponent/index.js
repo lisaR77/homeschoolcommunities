@@ -11,15 +11,7 @@ const CompleteFormSectionComponent = () => {
 
     return(
         <section className='completeFormSectionWrapper'>
-            <Row>
-                <Col span={24}>
-                    <p className='phaseHeadingWrapper'>
-                        *Phase 1 is subject to change to a homeschool community in Washington county.
-                    </p>
 
-                </Col>
-
-            </Row>
             <Row>
                 <Col lg={12} md={12} sm={24} xs={24}>
                     <div className='firstFormSectionWrapper'>

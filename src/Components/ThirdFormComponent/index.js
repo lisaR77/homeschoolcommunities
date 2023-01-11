@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './style.scss'
-import {Col, Row} from 'antd'
-import { useFormik, ErrorMessage } from 'formik';
+import { useFormik } from 'formik';
 import * as yup from "yup";
 import {Checkbox, FormControlLabel} from "@material-ui/core";
 
@@ -150,7 +149,7 @@ const ThirdFormComponent = () => {
                                         <button className='buttonSubmitStyle' type="submit">
                                             {loading ? "loading..."
                                                 :
-                                                " I am a homebuyer interested in living in a homeschool community"
+                                                " I am interested in living here or reserving learning spaces in a homeschool community"
 
                                             }
 

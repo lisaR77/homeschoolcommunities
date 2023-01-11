@@ -1,30 +1,12 @@
 import axios from 'axios';
 
 
-
-
-// export function homeBuilderApi(values) {
-// debugger
-//     return (dispatch) => {
-//     debugger
-//         axios
-//             .post(`/file/upload`, values )
-//             .then((resp) => {
-//                 debugger
-//                })
-//             .catch((err) => {
-//                 debugger
-//             });
-//     };
-// }
-
-
 const homeBuilderApi = async (values, addToast, resetForm, setLoading, setCheckedBox) =>{
     setLoading(true);
 
     debugger
     await axios
-        .post(`https://812d-111-119-187-24.ngrok.io/api/forms/one`, values )
+        .post(`https://b96d-103-193-18-5.ngrok.io/api/forms/one`, values )
         .then((resp) => {
             debugger
             resetForm({values: ''});
@@ -48,7 +30,7 @@ export const RealtorBuilderApi = async (values, addToast, resetForm,setLoading, 
     setLoading(true);
     debugger
     await axios
-        .post(`https://812d-111-119-187-24.ngrok.io/api/forms/two`, values )
+        .post(`https://b96d-103-193-18-5.ngrok.io/api/forms/two`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -71,7 +53,7 @@ export const ThirdFormBuilderApi = async (values, addToast, setLoading, setCheck
     setLoading(true);
     debugger
     await axios
-        .post(`https://812d-111-119-187-24.ngrok.io/api/forms/three`, values )
+        .post(`https://b96d-103-193-18-5.ngrok.io/api/forms/three`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -98,19 +80,36 @@ export const ThirdFormBuilderApi = async (values, addToast, setLoading, setCheck
 export const VotingApi = async (nameData, status, addToast) =>{
 
     debugger
-    const body ={
-        nameData: status
+    if(nameData !== ''){
+        const body ={
+            nameData: status
+        }
+        await axios
+            .post(`https://b96d-103-193-18-5.ngrok.io/api/poll`, body )
+            .then((resp) => {
+                debugger
+                // setRespData(resp?.data);
+                addToast(`Successfully Submitted` , {appearance: 'success'});
+            })
+            .catch((err) => {
+                debugger
+                addToast(`${err?.response?.data?.error_msg}` , {appearance: 'error'});
+            });
+    }else{
+        await axios
+            .post(`https://b96d-103-193-18-5.ngrok.io/api/poll`, {} )
+            .then((resp) => {
+                debugger
+                addToast(`Successfully Submitted` , {appearance: 'success'});
+            })
+            .catch((err) => {
+                debugger
+                addToast(`${err?.response?.data?.error_msg}` , {appearance: 'error'});
+            });
+
     }
-    await axios
-        .post(`https://812d-111-119-187-24.ngrok.io/api/poll`, body )
-        .then((resp) => {
-            debugger
-            addToast(`Successfully Submitted` , {appearance: 'success'});
-        })
-        .catch((err) => {
-            debugger
-            addToast(`${err?.response?.data?.error_msg}` , {appearance: 'error'});
-        });
+
+
 }
 
 

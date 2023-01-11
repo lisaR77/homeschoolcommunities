@@ -19,15 +19,15 @@ const FooterComponent = () => {
                 <div className='footerContentPointerWrapper'>
                     <div className='footerIconWrapper'>
                         <ImPhone size={22} color={'#455467'} />
-                        <p>
-                            +801 - 941-2815
-                        </p>
+                        <p >
+                            <a href="tel:+8019412815" >+801 - 941-2815</a>
+                        </p >
 
                     </div>
                     <div className='footerIconWrapper'>
                         <FaEnvelope size={22} color={'#455467'} />
                         <p>
-                            hautestyle@gmail.com
+                            <a href="mailto:hautestyle@gmail.com" > hautestyle@gmail.com </a>
                         </p>
 
                     </div>

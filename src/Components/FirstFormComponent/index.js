@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './style.scss'
-import {Col, Row} from 'antd'
-import { useFormik, ErrorMessage } from 'formik';
+
+import { useFormik } from 'formik';
 import * as yup from "yup";
 import {Checkbox, FormControlLabel} from "@material-ui/core";
 import homeBuilderApi from "../../API";

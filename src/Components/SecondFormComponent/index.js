@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './style.scss'
-import {Col, Row} from 'antd'
-import { useFormik, ErrorMessage } from 'formik';
+import { useFormik } from 'formik';
 import * as yup from "yup";
 import {Checkbox, FormControlLabel} from "@material-ui/core";
 
@@ -19,10 +18,6 @@ const SecondFormComponent = () => {
             .string('Please Enter Email ')
             .email('Please Enter Correct Email')
             .required('Email is required'),
-        company_name: yup
-            .string('Please Enter Company Name ')
-            .min(3, 'Please Enter at least 3 letters')
-            .required('Company Name is required'),
         contact_name: yup
             .string('Please Enter Contact Name ')
             .min(3, 'Please Enter at least 3 letters')
@@ -85,7 +80,7 @@ const SecondFormComponent = () => {
                                 </h4>
 
                                 {/*<FormControlLabel control={<Checkbox id='realtor' value={true} onChange={formik.handleChange} />} label="I am a realtor and plan to tell my clients about homeschool communities a period " /> <br/>*/}
-                                <FormControlLabel control={<Checkbox id='realtor' value={checkedBox} checked={checkedBox && checkedBox} onClick={handleCheck}  />} label="I am a realtor and plan to tell my clients about homeschool communities a period " /> <br/>
+                                <FormControlLabel control={<Checkbox id='realtor' value={checkedBox} checked={checkedBox && checkedBox} onClick={handleCheck}  />} label="I am a realtor and plan to tell my clients about homeschool communities." /> <br/>
 
 
                                 <div className='formSectionStyleWrapper'>
@@ -100,7 +95,7 @@ const SecondFormComponent = () => {
                                         onChange={formik.handleChange}
 
                                     />
-                                    <div className='errorColorStyle'>{formik?.errors.company_name}</div>
+
                                     </div>
                                     <div className='inputWrapperMarginStyle'>
                                     <input

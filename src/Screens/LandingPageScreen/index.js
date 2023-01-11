@@ -21,7 +21,30 @@ import IntoFutureText from '../../Assets/Images/IntoFutureText.png'
 import westleImage from '../../Assets/Images/westleImage.png'
 import {Col, Row} from "antd";
 import WestleCardComponent from "../../Components/WestleCardComponent";
+import {useToasts} from "react-toast-notifications";
+import {VotingApi} from "../../API";
+import FriendlyCardComponent from "../../Components/FriendlyCardComponent";
 const LandingPageScreen = () => {
+    const {addToast}  = useToasts();
+    const data=[
+        {id: 1, check: 'I advocate for homeschool communities', status: false, keyName:'homeschool_communities'},
+        {id: 2, check: 'I want this in my existing community', status: true, keyName:'existing_community'},
+        {id: 3, check: 'I want to build this', status: false,keyName:'build_this'},
+        {id: 4, check: 'I want to live here', status: true, keyName:'live_here'},
+        {id: 5, check: 'I want to serve here', status: false,keyName:'serve_here'},
+        {id: 6, check: 'I will tell my clients about it', status: false, keyName:'my_clients'},
+        {ipAdd: '123.00.34.34'}
+    ]
+
+    const handleVote = (nameData) => {
+        debugger
+        const filterData = data?.filter((newData)=> newData?.keyName === nameData);
+        debugger
+
+        VotingApi(nameData, filterData[0]?.status, addToast);
+
+    }
+
     return(
         <div>
         <div className='landingMainOuterWrapper'>
@@ -37,29 +60,43 @@ const LandingPageScreen = () => {
 
             <div className='sliderToggleWrapper'>
                 <div className='toggleCoupleFlex'>
-                <div>
-                    <ToggleComponent name={'homeschool_communities'} detail={'I advocate for homeschool communities'} />
-                </div>
-                <div>
-                    <ToggleComponent detail={'I want this in my existing community'} />
-                </div>
-                <div>
-                    <ToggleComponent detail={'I want to build this'} />
-                </div>
+                    {data?.map((data1, index)=>
+                        index <= 2 &&
+                        <div>
+                            <ToggleComponent statusData={data1?.status} name={data1?.keyName} detail={data1?.check} handleVote={handleVote} />
+                        </div>
+
+                    )}
+                {/*<div>*/}
+                {/*    <ToggleComponent valueData={false} name={'homeschool_communities'} detail={'I advocate for homeschool communities'} />*/}
+                {/*</div>*/}
+                {/*<div>*/}
+                {/*    <ToggleComponent detail={'I want this in my existing community'} />*/}
+                {/*</div>*/}
+                {/*<div>*/}
+                {/*    <ToggleComponent detail={'I want to build this'} />*/}
+                {/*</div>*/}
                 </div>
                 <div className='centerSlideImageWrapper'>
                     <img src={sliderImage} alt=""/>
                 </div>
                 <div className='toggleCoupleFlex'>
-                <div>
-                    <ToggleComponent detail={'I want to live here'} />
-                </div>
-                <div>
-                    <ToggleComponent detail={'I want to serve here'} />
-                </div>
-                <div>
-                    <ToggleComponent detail={'I will tell my clients about it'} />
-                </div>
+                    {data?.map((data1, index)=>
+                        index > 2 && index <= 5 &&
+                        <div>
+                            <ToggleComponent statusData={data1?.status} name={data1?.id} detail={data1?.check} />
+                        </div>
+
+                    )}
+                {/*<div>*/}
+                {/*    <ToggleComponent detail={'I want to live here'} />*/}
+                {/*</div>*/}
+                {/*<div>*/}
+                {/*    <ToggleComponent detail={'I want to serve here'} />*/}
+                {/*</div>*/}
+                {/*<div>*/}
+                {/*    <ToggleComponent detail={'I will tell my clients about it'} />*/}
+                {/*</div>*/}
                 </div>
 
             </div>
@@ -142,7 +179,7 @@ const LandingPageScreen = () => {
                             <div className='listsClubsWrapper'>
                                 <ul>
                                     <li>
-                                        Reserve the Auditorium & Science Lab
+                                        Reserve the Auditorium & Science Labs
                                     </li>
                                     <li>Access to the Library Bookstore, Football, Track, & Soccer fields</li>
                                     <li>Enjoy campus grounds with your family</li>
@@ -187,6 +224,37 @@ const LandingPageScreen = () => {
 
             </section>
 
+
+
+
+            <section className='friendSectionMainWrapper'>
+
+                <div className='headingFriendlySection'>
+                    <h3>
+                        Homeschool-Friendly  Neighborhoods
+                    </h3>
+
+                </div>
+
+                <div className='cardFriendlyWrapper'>
+                    <div className='wrapCarStyle'>
+                        <FriendlyCardComponent phase={'PHASE 1'} project={'Projected to begin in 2024'} address={'TBD, UT'} />
+                    </div>
+
+                    <div className='wrapCarStyle'>
+                        <FriendlyCardComponent phase={'PHASE 2'} project={'Projected to begin in 2025'} address={'TBD, UT'} />
+                    </div>
+                    <div className='wrapCarStyle'>
+                        <FriendlyCardComponent phase={'PHASE 3'} project={'Projected to begin in 2026'} address={'High Growth Area'} />
+                    </div>
+                    <div className='wrapCarStyle'>
+                        <FriendlyCardComponent phase={'PHASE 4'} project={'Projected to begin in 2027'} address={'Lehi, UT'} />
+                    </div>
+
+                </div>
+
+
+            </section>
 
 
 

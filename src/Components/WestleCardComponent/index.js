@@ -41,7 +41,7 @@ const WestleCardComponent = ({heading,center, image}) => {
                    <MdLocationOn color={'#6D767E'} size={18} />
 
                    <p>
-                       Eagle Mountain, Utah
+                      TBD
                    </p>
 
                </div>

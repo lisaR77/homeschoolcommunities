@@ -2,10 +2,11 @@
 
 
 .landingMainOuterWrapper {
-  height: 600px;
+  height: 900px;
   background-image: url('../../Assets/Images/banner.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position:left center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,6 +296,7 @@
     background-image: url('../../Assets/Images/banner.png');
     background-size: cover;
     background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -820,4 +822,101 @@
   flex-direction: row;
 
 
+}
+
+@media screen and (max-width: 1040px) {
+  .westleHomeSectionWrapper{
+    background: #ffffff;
+    padding: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+
+  }
+}
+
+
+@media screen and (max-width: 880px) {
+  .westleHomeSectionWrapper{
+    background: #ffffff;
+    padding: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+}
+
+
+//Friendly Section Styling Start
+
+.friendSectionMainWrapper{
+  background: transparent;
+  padding: 80px;
+}
+
+.headingFriendlySection{
+& h3{
+  font-size: 40px;
+  font-family: Inter-Regular;
+  font-weight: 600;
+  text-align: center;
+  color: #FFC107;
+}
+}
+.cardFriendlyWrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 50px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.wrapCarStyle{
+  padding:10px;
+}
+
+@media screen and (max-width: 500px) {
+  .friendSectionMainWrapper{
+    background: transparent;
+    padding: 30px;
+  }
+
+  .headingFriendlySection{
+    & h3{
+      font-size: 26px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #FFC107;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 330px) {
+  .friendSectionMainWrapper{
+    background: transparent;
+    padding: 20px;
+  }
+
+  .headingFriendlySection{
+    & h3{
+      font-size: 22px;
+      font-family: Inter-Regular;
+      font-weight: 600;
+      text-align: center;
+      color: #FFC107;
+    }
+  }
 }
