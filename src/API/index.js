@@ -77,18 +77,16 @@ export const ThirdFormBuilderApi = async (values, addToast, setLoading, setCheck
 
 
 
-export const VotingApi = async (nameData, status, addToast) =>{
+export const VotingApi = async (body, addToast, setData) =>{
 
     debugger
-    if(nameData !== ''){
-        const body ={
-            nameData: status
-        }
+    if(body !== ""){
+
         await axios
             .post(`https://b96d-103-193-18-5.ngrok.io/api/poll`, body )
             .then((resp) => {
                 debugger
-                // setRespData(resp?.data);
+                setData(resp?.data);
                 addToast(`Successfully Submitted` , {appearance: 'success'});
             })
             .catch((err) => {
@@ -100,7 +98,8 @@ export const VotingApi = async (nameData, status, addToast) =>{
             .post(`https://b96d-103-193-18-5.ngrok.io/api/poll`, {} )
             .then((resp) => {
                 debugger
-                addToast(`Successfully Submitted` , {appearance: 'success'});
+                setData(resp?.data);
+
             })
             .catch((err) => {
                 debugger

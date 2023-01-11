@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './style.scss'
 import RentalCardComponent from "../../Components/RentalCardComponent";
 import CompleteFormSectionComponent from "../../Components/CompleteFormSectionComponent";
@@ -26,22 +26,70 @@ import {VotingApi} from "../../API";
 import FriendlyCardComponent from "../../Components/FriendlyCardComponent";
 const LandingPageScreen = () => {
     const {addToast}  = useToasts();
-    const data=[
-        {id: 1, check: 'I advocate for homeschool communities', status: false, keyName:'homeschool_communities'},
-        {id: 2, check: 'I want this in my existing community', status: true, keyName:'existing_community'},
-        {id: 3, check: 'I want to build this', status: false,keyName:'build_this'},
-        {id: 4, check: 'I want to live here', status: true, keyName:'live_here'},
-        {id: 5, check: 'I want to serve here', status: false,keyName:'serve_here'},
-        {id: 6, check: 'I will tell my clients about it', status: false, keyName:'my_clients'},
-        {ipAdd: '123.00.34.34'}
-    ]
+    // const data=[
+    //     {id: 1, check: 'I advocate for homeschool communities', status: false, keyName:'homeschool_communities'},
+    //     {id: 2, check: 'I want this in my existing community', status: true, keyName:'existing_community'},
+    //     {id: 3, check: 'I want to build this', status: false,keyName:'build_this'},
+    //     {id: 4, check: 'I want to live here', status: true, keyName:'live_here'},
+    //     {id: 5, check: 'I want to serve here', status: false,keyName:'serve_here'},
+    //     {id: 6, check: 'I will tell my clients about it', status: false, keyName:'my_clients'},
+    //     {ipAdd: '123.00.34.34'}
+    // ]
+
+    const [data, setData] = useState([]);
+
+    useEffect(()=>{
+        debugger
+        const body = ""
+        VotingApi(body, addToast, setData);
+    },[]);
 
     const handleVote = (nameData) => {
         debugger
         const filterData = data?.filter((newData)=> newData?.keyName === nameData);
         debugger
 
-        VotingApi(nameData, filterData[0]?.status, addToast);
+        if(filterData[0]?.keyName === "homeschool_communities" ){
+            const body = {
+                "homeschool_communities":!filterData[0]?.status
+            }
+            VotingApi(body, addToast, setData);
+        }else if(filterData[0]?.keyName === "existing_community"){
+            const body = {
+                "existing_community":!filterData[0]?.status
+            }
+            VotingApi(body, addToast, setData);
+
+        }
+        else if(filterData[0]?.keyName === "build_this"){
+            const body = {
+                "build_this":!filterData[0]?.status
+            }
+            VotingApi(body, addToast, setData);
+
+        }
+        else if(filterData[0]?.keyName === "live_here"){
+            const body = {
+                "live_here":!filterData[0]?.status
+            }
+            VotingApi(body, addToast, setData);
+
+        }
+        else if(filterData[0]?.keyName === "serve_here"){
+            const body = {
+                "serve_here":!filterData[0]?.status
+            }
+            VotingApi(body, addToast, setData);
+
+        }
+        else if(filterData[0]?.keyName === "my_clients"){
+            const body = {
+                "my_clients":!filterData[0]?.status
+            }
+            VotingApi(body, addToast, setData);
+
+        }
+
 
     }
 
@@ -67,15 +115,7 @@ const LandingPageScreen = () => {
                         </div>
 
                     )}
-                {/*<div>*/}
-                {/*    <ToggleComponent valueData={false} name={'homeschool_communities'} detail={'I advocate for homeschool communities'} />*/}
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*    <ToggleComponent detail={'I want this in my existing community'} />*/}
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*    <ToggleComponent detail={'I want to build this'} />*/}
-                {/*</div>*/}
+
                 </div>
                 <div className='centerSlideImageWrapper'>
                     <img src={sliderImage} alt=""/>
@@ -84,19 +124,11 @@ const LandingPageScreen = () => {
                     {data?.map((data1, index)=>
                         index > 2 && index <= 5 &&
                         <div>
-                            <ToggleComponent statusData={data1?.status} name={data1?.id} detail={data1?.check} />
+                            <ToggleComponent statusData={data1?.status} name={data1?.keyName} detail={data1?.check} handleVote={handleVote} />
                         </div>
 
                     )}
-                {/*<div>*/}
-                {/*    <ToggleComponent detail={'I want to live here'} />*/}
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*    <ToggleComponent detail={'I want to serve here'} />*/}
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*    <ToggleComponent detail={'I will tell my clients about it'} />*/}
-                {/*</div>*/}
+
                 </div>
 
             </div>

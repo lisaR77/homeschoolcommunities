@@ -8,6 +8,7 @@
   flex-direction: column;
   width: 120px;
 
+
   & .ant-switch.ant-switch-checked {
     //background-color: #FFC107;
     background: none!important;
@@ -51,6 +52,7 @@
   & .ant-switch {
     //background-color: #BBBDC0;
     border: 1px solid #BBBDC0!important;
+    cursor: pointer!important;
   }
 
 
