@@ -15,8 +15,6 @@ import familyIconImage from '../../Assets/Images/familyIcon.png'
 import clubhouseImage from '../../Assets/Images/clubhouse.png'
 import campusImage from '../../Assets/Images/campus.png'
 import buildFutureText from '../../Assets/Images/buildFutureText.png'
-import buildEmpty from '../../Assets/Images/buildEmpty.png'
-import IntoBlank from '../../Assets/Images/IntoBlank.png'
 import IntoFutureText from '../../Assets/Images/IntoFutureText.png'
 import westleImage from '../../Assets/Images/westleImage.png'
 import {Col, Row} from "antd";
@@ -24,67 +22,83 @@ import WestleCardComponent from "../../Components/WestleCardComponent";
 import {useToasts} from "react-toast-notifications";
 import {VotingApi} from "../../API";
 import FriendlyCardComponent from "../../Components/FriendlyCardComponent";
+import { nanoid } from 'nanoid'
 const LandingPageScreen = () => {
     const {addToast}  = useToasts();
-    // const data=[
-    //     {id: 1, check: 'I advocate for homeschool communities', status: false, keyName:'homeschool_communities'},
-    //     {id: 2, check: 'I want this in my existing community', status: true, keyName:'existing_community'},
-    //     {id: 3, check: 'I want to build this', status: false,keyName:'build_this'},
-    //     {id: 4, check: 'I want to live here', status: true, keyName:'live_here'},
-    //     {id: 5, check: 'I want to serve here', status: false,keyName:'serve_here'},
-    //     {id: 6, check: 'I will tell my clients about it', status: false, keyName:'my_clients'},
-    //     {ipAdd: '123.00.34.34'}
-    // ]
-
     const [data, setData] = useState([]);
 
     useEffect(()=>{
+
+        const dataToken = localStorage.getItem('machineCode');
+        if(!dataToken){
+            debugger
+            const tokenUnique = nanoid();
+            debugger
+            localStorage.setItem('machineCode', tokenUnique);
+            const body = {
+                "ipId": tokenUnique
+            }
+            VotingApi(body, addToast, setData);
+
+        }else{
+            const body = {
+                "ipId": dataToken
+            }
+            VotingApi(body, addToast, setData);
+            debugger
+        }
         debugger
-        const body = ""
-        VotingApi(body, addToast, setData);
+
     },[]);
 
     const handleVote = (nameData) => {
         debugger
         const filterData = data?.filter((newData)=> newData?.keyName === nameData);
         debugger
+        const dataToken = localStorage.getItem('machineCode');
 
         if(filterData[0]?.keyName === "homeschool_communities" ){
             const body = {
-                "homeschool_communities":!filterData[0]?.status
+                "homeschool_communities":!filterData[0]?.status,
+                "ipId": dataToken
             }
             VotingApi(body, addToast, setData);
         }else if(filterData[0]?.keyName === "existing_community"){
             const body = {
-                "existing_community":!filterData[0]?.status
+                "existing_community":!filterData[0]?.status,
+                "ipId": dataToken
             }
             VotingApi(body, addToast, setData);
 
         }
         else if(filterData[0]?.keyName === "build_this"){
             const body = {
-                "build_this":!filterData[0]?.status
+                "build_this":!filterData[0]?.status,
+                "ipId": dataToken
             }
             VotingApi(body, addToast, setData);
 
         }
         else if(filterData[0]?.keyName === "live_here"){
             const body = {
-                "live_here":!filterData[0]?.status
+                "live_here":!filterData[0]?.status,
+                "ipId": dataToken
             }
             VotingApi(body, addToast, setData);
 
         }
         else if(filterData[0]?.keyName === "serve_here"){
             const body = {
-                "serve_here":!filterData[0]?.status
+                "serve_here":!filterData[0]?.status,
+                "ipId": dataToken
             }
             VotingApi(body, addToast, setData);
 
         }
         else if(filterData[0]?.keyName === "my_clients"){
             const body = {
-                "my_clients":!filterData[0]?.status
+                "my_clients":!filterData[0]?.status,
+                "ipId": dataToken
             }
             VotingApi(body, addToast, setData);
 

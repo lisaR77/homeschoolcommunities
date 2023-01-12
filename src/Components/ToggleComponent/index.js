@@ -13,10 +13,7 @@ const ToggleComponent = ({name,detail, statusData,handleVote}) => {
             <p className='paraToggleStyle'>
                 {detail}
             </p>
-
-
             <Switch checkedChildren="Yes" unCheckedChildren="" checked={statusData ? statusData : false} onClick={()=>handleVote(name)}   />
-
         </section>
     )
 }
