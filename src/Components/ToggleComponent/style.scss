@@ -9,54 +9,125 @@
   width: 120px;
 
 
-  & .ant-switch.ant-switch-checked {
-    //background-color: #FFC107;
-    background: none!important;
-    border: 1px solid #FFC107!important;
+}
 
-  }
-  & .ant-switch.ant-switch-checked:before{
-    opacity: 0!important;
-  }
 
-  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-handle{
-    top:1px!important;
-  }
-  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-handle::before{
-    background: #BBBDC0!important;
-  }
-  :where(.css-dev-only-do-not-override-k83k30).ant-switch.ant-switch-checked .ant-switch-handle::before{
-    background: white!important;
-    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0, #FFC107, #FFC107 100%)!important;
-  }
 
-  :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-checked, :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-unchecked{
-    color: #FFC107!important;
-    margin-top: -1px!important;
-  }
-  & .ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
-    //background-color: #FFC107;
-    background: transparent!important;
-    border: 1px solid #FFC107!important;
-  }
-
-  & .ant-switch .ant-switch-checked:not(.ant-switch-disabled) {
-    background-color: gray!important;
-  }
-
-  & .ant-switch:hover:not(.ant-switch-disabled) {
-    background-color: none!important;
-    border: 1px solid #BBBDC0!important;
-  }
-
-  & .ant-switch {
-    //background-color: #BBBDC0;
-    border: 1px solid #BBBDC0!important;
-    cursor: pointer!important;
-  }
-
+ .ant-switch.ant-switch-checked {
+  //background-color: #FFC107;
+  background: none!important;
+  border: 1px solid #FFC107!important;
 
 }
+ .ant-switch.ant-switch-checked:before{
+  opacity: 0!important;
+}
+
+:where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-handle{
+  top:1px!important;
+}
+:where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-handle::before{
+  background: #BBBDC0!important;
+}
+:where(.css-dev-only-do-not-override-k83k30).ant-switch.ant-switch-checked .ant-switch-handle::before{
+  background: white!important;
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0, #FFC107, #FFC107 100%)!important;
+}
+
+:where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-checked, :where(.css-dev-only-do-not-override-k83k30).ant-switch .ant-switch-inner .ant-switch-inner-unchecked{
+  color: #FFC107!important;
+  margin-top: -1px!important;
+}
+ .ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
+  //background-color: #FFC107;
+  background: transparent!important;
+  border: 1px solid #FFC107!important;
+}
+
+ .ant-switch .ant-switch-checked:not(.ant-switch-disabled) {
+  background-color: gray!important;
+}
+
+ .ant-switch:hover:not(.ant-switch-disabled) {
+  background-color: none!important;
+  border: 1px solid #BBBDC0!important;
+}
+
+ .ant-switch {
+  //background-color: #BBBDC0;
+  border: 1px solid #BBBDC0!important;
+  cursor: pointer!important;
+}
+
+
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
 .spanToggleNumberStyle{
   font-size: 20px;
   font-family: Inter-Regular;

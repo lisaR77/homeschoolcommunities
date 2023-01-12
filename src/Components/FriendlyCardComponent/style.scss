@@ -80,9 +80,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 30px;
+  margin-top: 10px;
 
   & img{
-    width: 70%;
+    width: 40%;
   }
 }
 
@@ -180,9 +182,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 10px;
 
     & img{
-      width: 50%;
+      width: 30%;
     }
   }
 
@@ -270,9 +274,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    margin-bottom: 30px;
+    margin-top: 10px;
     & img{
-      width: 50%;
+      width: 40%;
     }
   }
 

@@ -3,6 +3,7 @@ import './style.scss'
 import { Switch } from 'antd';
 
 const ToggleComponent = ({name,detail, statusData,handleVote}) => {
+   
 
     return(
         <section className='toggleWrapperStyle'>
@@ -12,6 +13,7 @@ const ToggleComponent = ({name,detail, statusData,handleVote}) => {
             <p className='paraToggleStyle'>
                 {detail}
             </p>
+
 
             <Switch checkedChildren="Yes" unCheckedChildren="" checked={statusData ? statusData : false} onClick={()=>handleVote(name)}   />
 

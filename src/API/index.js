@@ -6,7 +6,7 @@ const homeBuilderApi = async (values, addToast, resetForm, setLoading, setChecke
 
     debugger
     await axios
-        .post(`https://b96d-103-193-18-5.ngrok.io/api/forms/one`, values )
+        .post(`https://4a97-103-193-18-5.ngrok.io/api/forms/one`, values )
         .then((resp) => {
             debugger
             resetForm({values: ''});
@@ -30,7 +30,7 @@ export const RealtorBuilderApi = async (values, addToast, resetForm,setLoading, 
     setLoading(true);
     debugger
     await axios
-        .post(`https://b96d-103-193-18-5.ngrok.io/api/forms/two`, values )
+        .post(`https://4a97-103-193-18-5.ngrok.io/api/forms/two`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -53,7 +53,7 @@ export const ThirdFormBuilderApi = async (values, addToast, setLoading, setCheck
     setLoading(true);
     debugger
     await axios
-        .post(`https://b96d-103-193-18-5.ngrok.io/api/forms/three`, values )
+        .post(`https://4a97-103-193-18-5.ngrok.io/api/forms/three`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -83,7 +83,7 @@ export const VotingApi = async (body, addToast, setData) =>{
     if(body !== ""){
 
         await axios
-            .post(`https://b96d-103-193-18-5.ngrok.io/api/poll`, body )
+            .post(`https://4a97-103-193-18-5.ngrok.io/api/poll`, body )
             .then((resp) => {
                 debugger
                 setData(resp?.data);
@@ -95,7 +95,7 @@ export const VotingApi = async (body, addToast, setData) =>{
             });
     }else{
         await axios
-            .post(`https://b96d-103-193-18-5.ngrok.io/api/poll`, {} )
+            .post(`https://4a97-103-193-18-5.ngrok.io/api/poll`, {} )
             .then((resp) => {
                 debugger
                 setData(resp?.data);
