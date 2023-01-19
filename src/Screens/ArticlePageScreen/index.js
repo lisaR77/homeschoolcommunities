@@ -60,7 +60,7 @@ const ArticlePageScreen = () => {
 
 
 
-        {/*    article Image section*/}
+
 
             <div className='articleImageSectionMain'>
                 <div className='articleImageWrapper'>
