@@ -105,6 +105,21 @@
   }
 
 
+  .footerIconWrapper{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+
+    & p a{
+      font-size: 14px;
+      color: #6D767E;
+      font-family: Roboto;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+  }
+
 }
 
 

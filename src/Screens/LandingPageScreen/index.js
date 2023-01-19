@@ -20,15 +20,23 @@ import westleImage from '../../Assets/Images/westleImage.png'
 import {Col, Row} from "antd";
 import WestleCardComponent from "../../Components/WestleCardComponent";
 import {useToasts} from "react-toast-notifications";
-import {VotingApi} from "../../API";
+import {VotingApi, VotingApiFirst} from "../../API";
 import FriendlyCardComponent from "../../Components/FriendlyCardComponent";
 import { nanoid } from 'nanoid'
+import {BsArrowRight} from "react-icons/bs";
+import {Link} from "react-router-dom";
+
+import { Loader } from 'react-clip-loader'
+import 'react-clip-loader/dist/index.css'
+
+
 const LandingPageScreen = () => {
     const {addToast}  = useToasts();
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(()=>{
-
+debugger
         const dataToken = localStorage.getItem('machineCode');
         if(!dataToken){
             debugger
@@ -38,13 +46,13 @@ const LandingPageScreen = () => {
             const body = {
                 "ipId": tokenUnique
             }
-            VotingApi(body, addToast, setData);
+            VotingApiFirst(body, addToast, setData, setLoading);
 
         }else{
             const body = {
                 "ipId": dataToken
             }
-            VotingApi(body, addToast, setData);
+            VotingApiFirst(body, addToast, setData,setLoading);
             debugger
         }
         debugger
@@ -62,13 +70,13 @@ const LandingPageScreen = () => {
                 "homeschool_communities":!filterData[0]?.status,
                 "ipId": dataToken
             }
-            VotingApi(body, addToast, setData);
+            VotingApi(body, addToast, setData, setLoading);
         }else if(filterData[0]?.keyName === "existing_community"){
             const body = {
                 "existing_community":!filterData[0]?.status,
                 "ipId": dataToken
             }
-            VotingApi(body, addToast, setData);
+            VotingApi(body, addToast, setData, setLoading);
 
         }
         else if(filterData[0]?.keyName === "build_this"){
@@ -76,7 +84,7 @@ const LandingPageScreen = () => {
                 "build_this":!filterData[0]?.status,
                 "ipId": dataToken
             }
-            VotingApi(body, addToast, setData);
+            VotingApi(body, addToast, setData, setLoading);
 
         }
         else if(filterData[0]?.keyName === "live_here"){
@@ -84,7 +92,7 @@ const LandingPageScreen = () => {
                 "live_here":!filterData[0]?.status,
                 "ipId": dataToken
             }
-            VotingApi(body, addToast, setData);
+            VotingApi(body, addToast, setData, setLoading);
 
         }
         else if(filterData[0]?.keyName === "serve_here"){
@@ -92,7 +100,7 @@ const LandingPageScreen = () => {
                 "serve_here":!filterData[0]?.status,
                 "ipId": dataToken
             }
-            VotingApi(body, addToast, setData);
+            VotingApi(body, addToast, setData, setLoading);
 
         }
         else if(filterData[0]?.keyName === "my_clients"){
@@ -100,7 +108,7 @@ const LandingPageScreen = () => {
                 "my_clients":!filterData[0]?.status,
                 "ipId": dataToken
             }
-            VotingApi(body, addToast, setData);
+            VotingApi(body, addToast, setData, setLoading);
 
         }
 
@@ -109,12 +117,30 @@ const LandingPageScreen = () => {
 
     return(
         <div>
+
         <div className='landingMainOuterWrapper'>
+            {loading ?
+                <div className='overlayLoaderWrapper'>
+                    <Loader small={true} />
+                </div> : null
+            }
+
             <div className='landingBannerContentWrapper'>
                 <p>
                     Building homeschool communities
                 </p>
                 <h3>DRIVING  <span> CHANGE </span>  IN <span> EDUCATION </span></h3>
+
+                <Link to={'/article'} className={'linkReadMore'}>
+                    <div className='readMoreButtonWrapper'>
+                        <p>
+                            Read On
+                        </p>
+                        <BsArrowRight className='arrowrightIcon' size={22} color={'#fff'} />
+
+                    </div>
+
+                </Link>
 
             </div>
 

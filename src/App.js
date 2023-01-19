@@ -1,20 +1,24 @@
 import {Fragment} from "react";
-import LandingPageContainer from "./Containers/LandingPageContainer";
 import Header from "./Components/Header";
 import "antd/dist/reset.css";
 import FooterComponent from "./Components/FooterComponent";
-import {ToastProvider} from "react-toast-notifications";
 
+
+import {  Routes ,Route } from 'react-router-dom';
+import LandingPageContainer from "./Containers/LandingPageContainer";
+import ArticlePageScreen from "./Screens/ArticlePageScreen";
 function App() {
   return (
-    <Fragment>
-        <ToastProvider autoDismiss={true} autoDismissTimeout={4000} PlacementType="bottom-right">
-        <Header />
-      <LandingPageContainer />
-        <FooterComponent />
-        </ToastProvider>
+      <Fragment>
+          <Header />
+          <Routes>
+              <Route path='/' element={<LandingPageContainer/>} />
+              <Route path='/article' element={<ArticlePageScreen/>} />
+          </Routes>
 
-    </Fragment>
+          <FooterComponent />
+      </Fragment>
+
   );
 }
 

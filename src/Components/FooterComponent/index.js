@@ -27,7 +27,7 @@ const FooterComponent = () => {
                     <div className='footerIconWrapper'>
                         <FaEnvelope size={22} color={'#455467'} />
                         <p>
-                            <a href="mailto:hautestyle@gmail.com" > hautestyle@gmail.com </a>
+                            <a href="mailto:lisa@homeschoolcommunities.org" > lisa@homeschoolcommunities.org </a>
                         </p>
 
                     </div>

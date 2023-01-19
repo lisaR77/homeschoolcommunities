@@ -1,0 +1,491 @@
+.articleScreenSection{
+    background-color: #ffffff;
+    padding:40px;
+}
+.linkBackStyle{
+  text-decoration: none;
+}
+.backWrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    //background-color: red;
+
+    & p{
+          padding-left: 10px;
+      color: #455467;
+      }
+}
+
+.backIcon{
+    margin-top: -12px;
+
+}
+
+
+
+.articleHeadingMainWrapper{
+    margin-top: 40px;
+
+    & h4{
+        font-size: 18px;
+        font-family: Inter-Regular;
+        color: #003580;
+        font-weight: bold;
+
+    }
+    & h3{
+       color:#101729;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Inter-Regular;
+        margin-top: 20px;
+
+    }
+    & p{
+        color:#455467;
+        font-size: 16px;
+        margin-top: 60px;
+      font-weight: 600;
+        font-family: Inter-Regular;
+    }
+}
+
+
+
+
+
+//Article Para section styling start
+
+
+.articleParaSectionStart{
+
+}
+
+.articleParaOwnSection{
+  margin-top: 50px;
+
+  & h3{
+    color:#000000;
+    font-size: 16px;
+    font-family: Inter-Regular;
+  }
+
+  & p{
+    color:#6D767E;
+    font-size: 16px;
+    margin-top: 40px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: Inter-Regular;
+  }
+}
+
+
+
+//Article Image Section
+
+.articleImageSectionMain{
+margin-top: 50px;
+}
+
+.articleImageWrapper{
+  //background-image: url('../../Assets/Images/articleImage.png');
+  width: 70%;
+  //height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img{
+    width: 100%;
+  }
+
+}
+
+
+.articleImageButtonWrapper{
+  background-color: rgba(255, 185, 134, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right:30px;
+  padding-left:30px;
+  padding-top:20px;
+  padding-bottom:20px;
+  border-radius: 10px;
+  color:#ffffff;
+  font-size: 22px;
+  font-family: Inter-Regular;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.articleImageSectionMain p{
+  color:#6D767E;
+  font-size: 16px;
+  margin-top: 40px;
+  font-weight: 500;
+  line-height: 20px;
+  font-family: Inter-Regular;
+}
+
+
+
+
+
+//Article Date Section start
+.articleDatesSectionWrapper{
+  border-bottom: 1px solid #003580;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 50px;
+
+}
+
+.articleDateWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+   & p{
+     font-size: 16px;
+     font-weight: 500;
+     margin-right: 40px;
+     font-family: Inter-Regular;
+     color: #101729;
+   }
+
+  & .dateparaStyle{
+    color: #848484!important;
+  }
+
+}
+
+.articleTimeWrapper{
+
+
+  & p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 40px;
+    font-family: Inter-Regular;
+    color: #101729;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+  .articleScreenSection{
+    background-color: #ffffff;
+    padding:20px;
+  }
+  .articleHeadingMainWrapper{
+    margin-top: 40px;
+
+    & h4{
+      font-size: 16px;
+      font-family: Inter-Regular;
+      color: #003580;
+      font-weight: bold;
+
+    }
+    & h3{
+      color:#101729;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: Inter-Regular;
+      margin-top: 20px;
+
+    }
+    & p{
+      color:#455467;
+      font-size: 14px;
+      margin-top: 60px;
+      font-weight: 600;
+      font-family: Inter-Regular;
+    }
+  }
+
+
+  .articleDatesSectionWrapper{
+    border-bottom: 1px solid #003580;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 40px;
+
+  }
+
+  .articleDateWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    & p{
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 40px;
+      font-family: Inter-Regular;
+      color: #101729;
+    }
+
+    & .dateparaStyle{
+      color: #848484!important;
+    }
+
+  }
+
+  .articleTimeWrapper{
+
+
+    & p{
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 0px;
+      font-family: Inter-Regular;
+      color: #101729;
+    }
+
+
+  }
+
+
+
+
+
+
+  .articleImageWrapper{
+    //background-image: url('../../Assets/Images/articleImage.png');
+    width: 100%;
+    //height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .articleImageButtonWrapper{
+    background-color: rgba(255, 185, 134, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right:30px;
+    padding-left:30px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-radius: 10px;
+    color:#ffffff;
+    font-size: 18px;
+    font-family: Inter-Regular;
+    font-weight: bold;
+
+
+  }
+
+  .articleImageSectionMain p{
+    color:#6D767E;
+    font-size: 14px;
+    margin-top: 40px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: Inter-Regular;
+  }
+
+
+
+
+  .articleParaOwnSection{
+    margin-top: 50px;
+
+    & h2{
+      color:#000000;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: Inter-Regular;
+    }
+
+    & p{
+      color:#6D767E;
+      font-size: 14px;
+      margin-top: 40px;
+      font-weight: 500;
+      line-height: 20px;
+      font-family: Inter-Regular;
+    }
+  }
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+
+  .articleScreenSection{
+    background-color: #ffffff;
+    padding:20px;
+  }
+  .articleHeadingMainWrapper{
+    margin-top: 30px;
+
+    & h4{
+      font-size: 12px;
+      font-family: Inter-Regular;
+      color: #003580;
+      font-weight: bold;
+
+    }
+    & h3{
+      color:#101729;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: Inter-Regular;
+      margin-top: 20px;
+
+    }
+    & p{
+      color:#455467;
+      font-size: 12px;
+      margin-top: 30px;
+      font-weight: 600;
+      font-family: Inter-Regular;
+    }
+  }
+
+
+  .articleDatesSectionWrapper{
+    border-bottom: 1px solid #003580;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+
+  }
+
+  .articleDateWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    & p{
+      font-size: 12px;
+      font-weight: 500;
+      margin-right: 40px;
+      font-family: Inter-Regular;
+      color: #101729;
+    }
+
+    & .dateparaStyle{
+      color: #848484!important;
+    }
+
+  }
+
+  .articleTimeWrapper{
+
+
+    & p{
+      font-size: 12px;
+      font-weight: 500;
+      margin-right: 0px;
+      font-family: Inter-Regular;
+      color: #101729;
+    }
+
+
+  }
+
+
+
+
+
+
+  .articleImageWrapper{
+    //background-image: url('../../Assets/Images/articleImage.png');
+    width: 90%;
+    //height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img{
+      width: 100%;
+    }
+  }
+
+
+  .articleImageButtonWrapper{
+    background-color: rgba(255, 185, 134, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right:20px;
+    padding-left:20px;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-radius: 10px;
+    color:#ffffff;
+    font-size: 14px;
+    font-family: Inter-Regular;
+    font-weight: bold;
+
+
+  }
+
+  .articleImageSectionMain p{
+    color:#6D767E;
+    font-size: 12px;
+    margin-top: 40px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: Inter-Regular;
+  }
+
+
+
+
+  .articleParaOwnSection{
+    margin-top: 40px;
+
+    & h2{
+      color:#000000;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Inter-Regular;
+    }
+
+    & p{
+      color:#6D767E;
+      font-size: 12px;
+      margin-top: 40px;
+      font-weight: 500;
+      line-height: 20px;
+      font-family: Inter-Regular;
+    }
+  }
+
+
+
+}

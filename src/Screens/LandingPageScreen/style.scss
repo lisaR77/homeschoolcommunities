@@ -14,6 +14,19 @@
   position: relative;
 }
 
+.overlayLoaderWrapper{
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+}
+
+
 .landingBannerContentWrapper{
   //background: red;
   padding:10px;
@@ -919,4 +932,42 @@
       color: #FFC107;
     }
   }
+}
+
+
+
+
+
+
+
+
+
+//Read More button styling
+.readMoreButtonWrapper{
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+  cursor: pointer;
+  border-radius: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 12px;
+  padding-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkReadMore{
+  text-decoration: none!important;
+}
+.readMoreButtonWrapper p {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none!important;
+  color: #ffffff;
+  padding-right: 10px;
+  font-family: Inter-Regular;
+}
+.arrowrightIcon{
+  margin-top: -5px;
 }
