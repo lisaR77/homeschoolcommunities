@@ -5,7 +5,7 @@ const homeBuilderApi = async (values, addToast, resetForm, setLoading, setChecke
     setLoading(true);
     debugger
     await axios
-        .post(`https://7bd6-103-193-18-8.ngrok.io/api/forms/one`, values )
+        .post(`http://68.178.207.95:3000/api/forms/one`, values )
         .then((resp) => {
             debugger
             resetForm({values: ''});
@@ -29,7 +29,7 @@ export const RealtorBuilderApi = async (values, addToast, resetForm,setLoading, 
     setLoading(true);
     debugger
     await axios
-        .post(`https://7bd6-103-193-18-8.ngrok.io/api/forms/two`, values )
+        .post(`http://68.178.207.95:3000/api/forms/two`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -52,7 +52,7 @@ export const ThirdFormBuilderApi = async (values, addToast, setLoading, setCheck
     setLoading(true);
     debugger
     await axios
-        .post(`https://7bd6-103-193-18-8.ngrok.io/api/forms/three`, values )
+        .post(`http://68.178.207.95:3000/api/forms/three`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -82,7 +82,7 @@ export const VotingApi = async (body, addToast, setData, setLoading) =>{
     if(body !== ""){
       setLoading(true)
         await axios
-            .post(`https://7bd6-103-193-18-8.ngrok.io/api/poll`, body )
+            .post(`http://68.178.207.95:3000/api/poll`, body )
             .then((resp) => {
                 debugger
                 setData(resp?.data);
@@ -96,7 +96,7 @@ export const VotingApi = async (body, addToast, setData, setLoading) =>{
             });
     }else{
         await axios
-            .post(`https://7bd6-103-193-18-8.ngrok.io/api/poll`, {} )
+            .post(`http://68.178.207.95:3000/api/poll`, {} )
             .then((resp) => {
                 debugger
                 setLoading(false)
@@ -122,7 +122,7 @@ export const VotingApiFirst = async (body, addToast, setData,setLoading) =>{
     if(body !== ""){
         setLoading(true)
         await axios
-            .post(`https://7bd6-103-193-18-8.ngrok.io/api/poll`, body )
+            .post(`http://68.178.207.95:3000/api/poll`, body )
             .then((resp) => {
                 debugger
                 setData(resp?.data);
