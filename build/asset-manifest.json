@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ede3a063.css",
+    "main.js": "/static/js/main.0242efb1.js",
+    "static/js/787.9e963b8a.chunk.js": "/static/js/787.9e963b8a.chunk.js",
+    "static/media/banner.png": "/static/media/banner.c9dff733bb46d8dbc50c.png",
+    "static/media/articleImage.png": "/static/media/articleImage.f8b114356d348f0a2ae5.png",
+    "static/media/clubhouse.png": "/static/media/clubhouse.815f0b6d0c615e4853c1.png",
+    "static/media/Inter-Bold.ttf": "/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
+    "static/media/Inter-Regular.ttf": "/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "static/media/westleImage.png": "/static/media/westleImage.c80a3ccbf0433a783af7.png",
+    "static/media/slideImage.png": "/static/media/slideImage.2e7418cb91d4a5b4eca1.png",
+    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "static/media/IntoFutureText.png": "/static/media/IntoFutureText.c909fbb404612d8accc9.png",
+    "static/media/Suwannaphum-Bold.ttf": "/static/media/Suwannaphum-Bold.069807c79c8b17feb996.ttf",
+    "static/media/buildFutureText.png": "/static/media/buildFutureText.5c94e8d507f9a56cbd2f.png",
+    "static/media/Suwannaphum-Regular.ttf": "/static/media/Suwannaphum-Regular.f12ef4eb7b147921ff2e.ttf",
+    "static/media/campus.png": "/static/media/campus.dac11a5c62b3e3932f29.png",
+    "static/media/rental1.png": "/static/media/rental1.f1aab4830dea358247e8.png",
+    "static/media/rental3.png": "/static/media/rental3.325487016433fceb7d59.png",
+    "static/media/rental2.png": "/static/media/rental2.463fc61add8c8fb01f12.png",
+    "static/media/resources.png": "/static/media/resources.1fdc5b147796e0167b1e.png",
+    "static/media/person.png": "/static/media/person.740a012cd963fd10bdab.png",
+    "static/media/familyIcon.png": "/static/media/familyIcon.39db5e368333385a7a54.png",
+    "static/media/bathroom.svg": "/static/media/bathroom.0a258db26b84dafaa4d5eecc9103c714.svg",
+    "static/media/classroom.svg": "/static/media/classroom.a8b0cab1a44b1670dc07c7b47c83a47f.svg",
+    "static/media/students.svg": "/static/media/students.bbacbff65b6fde1ca025beae8a2be77c.svg",
+    "index.html": "/index.html",
+    "static/media/hrLine.svg": "/static/media/hrLine.fe04d708981fd7707c51f8b3ff6a0a67.svg",
+    "main.ede3a063.css.map": "/static/css/main.ede3a063.css.map",
+    "main.0242efb1.js.map": "/static/js/main.0242efb1.js.map",
+    "787.9e963b8a.chunk.js.map": "/static/js/787.9e963b8a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ede3a063.css",
+    "static/js/main.0242efb1.js"
+  ]
+}
