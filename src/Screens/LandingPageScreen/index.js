@@ -274,9 +274,6 @@ debugger
                                     <h4>
                                         Up to 10 family members per year package deals offered
                                     </h4>
-                                    <p>
-                                        *Monthly Membership fees not included. Residents pay into monthly membership fees plus HOA fees
-                                    </p>
 
                                 </div>
 
@@ -320,7 +317,7 @@ debugger
                         <FriendlyCardComponent phase={'PHASE 3'} project={'Projected to begin in 2026'} address={'High Growth Area'} />
                     </div>
                     <div className='wrapCarStyle'>
-                        <FriendlyCardComponent phase={'PHASE 4'} project={'Projected to begin in 2027'} address={'Lehi, UT'} />
+                        <FriendlyCardComponent phase={'PHASE 4'} project={'Projected to begin in 2027'} address={'High Growth Area'} />
                     </div>
 
                 </div>
