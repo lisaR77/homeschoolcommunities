@@ -30,7 +30,7 @@
 
     & h4{
         font-size: 18px;
-        font-family: Inter-Regular;
+        font-family: Poppins-Regular;
         color: #003580;
         font-weight: bold;
 
@@ -39,16 +39,17 @@
        color:#101729;
         font-size: 40px;
         font-weight: bold;
-        font-family: Inter-Regular;
+        font-family: Poppins-Regular;
         margin-top: 20px;
 
     }
     & p{
         color:#455467;
-        font-size: 16px;
+        font-size: 18px;
         margin-top: 60px;
       font-weight: 600;
-        font-family: Inter-Regular;
+      //background-color:red;
+        font-family: Poppins-Regular;
     }
 }
 
@@ -67,18 +68,20 @@
   margin-top: 50px;
 
   & h3{
-    color:#000000;
-    font-size: 16px;
-    font-family: Inter-Regular;
+    color: #3786d2;
+    font-size: 28px;
+    font-family: Poppins-Regular;
+    font-weight: bold;
+    line-height: 40px;
   }
 
   & p{
     color:#6D767E;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 40px;
     font-weight: 500;
-    line-height: 20px;
-    font-family: Inter-Regular;
+    line-height: 25px;
+    font-family: Poppins-Regular;
   }
 }
 
@@ -119,7 +122,7 @@ margin-top: 50px;
   border-radius: 10px;
   color:#ffffff;
   font-size: 22px;
-  font-family: Inter-Regular;
+  font-family: Poppins-Regular;
   font-weight: bold;
   cursor: pointer;
 
@@ -127,11 +130,11 @@ margin-top: 50px;
 
 .articleImageSectionMain p{
   color:#6D767E;
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 40px;
   font-weight: 500;
   line-height: 20px;
-  font-family: Inter-Regular;
+  font-family: Poppins-Regular;
 }
 
 
@@ -156,10 +159,11 @@ margin-top: 50px;
   flex-direction: row;
 
    & p{
-     font-size: 16px;
+     font-size: 18px;
      font-weight: 500;
      margin-right: 40px;
-     font-family: Inter-Regular;
+     font-family: Poppins-Regular;
+     //background-color: red;
      color: #101729;
    }
 
@@ -173,10 +177,10 @@ margin-top: 50px;
 
 
   & p{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     margin-right: 40px;
-    font-family: Inter-Regular;
+    font-family: Poppins-Regular;
     color: #101729;
   }
 
@@ -195,8 +199,8 @@ margin-top: 50px;
     margin-top: 40px;
 
     & h4{
-      font-size: 16px;
-      font-family: Inter-Regular;
+      font-size: 28px;
+      font-family: Poppins-Regular;
       color: #003580;
       font-weight: bold;
 
@@ -205,7 +209,7 @@ margin-top: 50px;
       color:#101729;
       font-size: 30px;
       font-weight: bold;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
       margin-top: 20px;
 
     }
@@ -214,7 +218,7 @@ margin-top: 50px;
       font-size: 14px;
       margin-top: 60px;
       font-weight: 600;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
     }
   }
 
@@ -239,7 +243,7 @@ margin-top: 50px;
       font-size: 14px;
       font-weight: 500;
       margin-right: 40px;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
       color: #101729;
     }
 
@@ -256,7 +260,7 @@ margin-top: 50px;
       font-size: 14px;
       font-weight: 500;
       margin-right: 0px;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
       color: #101729;
     }
 
@@ -292,7 +296,7 @@ margin-top: 50px;
     border-radius: 10px;
     color:#ffffff;
     font-size: 18px;
-    font-family: Inter-Regular;
+    font-family: Poppins-Regular;
     font-weight: bold;
 
 
@@ -304,7 +308,7 @@ margin-top: 50px;
     margin-top: 40px;
     font-weight: 500;
     line-height: 20px;
-    font-family: Inter-Regular;
+    font-family: Poppins-Regular;
   }
 
 
@@ -317,7 +321,7 @@ margin-top: 50px;
       color:#000000;
       font-size: 18px;
       font-weight: bold;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
     }
 
     & p{
@@ -326,7 +330,7 @@ margin-top: 50px;
       margin-top: 40px;
       font-weight: 500;
       line-height: 20px;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
     }
   }
 
@@ -348,7 +352,7 @@ margin-top: 50px;
 
     & h4{
       font-size: 12px;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
       color: #003580;
       font-weight: bold;
 
@@ -357,7 +361,7 @@ margin-top: 50px;
       color:#101729;
       font-size: 20px;
       font-weight: bold;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
       margin-top: 20px;
 
     }
@@ -366,7 +370,7 @@ margin-top: 50px;
       font-size: 12px;
       margin-top: 30px;
       font-weight: 600;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
     }
   }
 
@@ -391,7 +395,7 @@ margin-top: 50px;
       font-size: 12px;
       font-weight: 500;
       margin-right: 40px;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
       color: #101729;
     }
 
@@ -408,7 +412,7 @@ margin-top: 50px;
       font-size: 12px;
       font-weight: 500;
       margin-right: 0px;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
       color: #101729;
     }
 
@@ -448,7 +452,7 @@ margin-top: 50px;
     border-radius: 10px;
     color:#ffffff;
     font-size: 14px;
-    font-family: Inter-Regular;
+    font-family: Poppins-Regular;
     font-weight: bold;
 
 
@@ -460,7 +464,7 @@ margin-top: 50px;
     margin-top: 40px;
     font-weight: 500;
     line-height: 20px;
-    font-family: Inter-Regular;
+    font-family: Poppins-Regular;
   }
 
 
@@ -473,7 +477,7 @@ margin-top: 50px;
       color:#000000;
       font-size: 16px;
       font-weight: bold;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
     }
 
     & p{
@@ -482,10 +486,16 @@ margin-top: 50px;
       margin-top: 40px;
       font-weight: 500;
       line-height: 20px;
-      font-family: Inter-Regular;
+      font-family: Poppins-Regular;
     }
   }
 
 
 
+}
+
+
+.list_points_article li{
+  margin-bottom:30px;
+  line-height: 25px;
 }

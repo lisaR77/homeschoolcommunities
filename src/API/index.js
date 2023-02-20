@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-
+const apiUrl = 'https://nodeapp.homeschoolcommunities.org';
 const homeBuilderApi = async (values, addToast, resetForm, setLoading, setCheckedBox) =>{
     setLoading(true);
     debugger
     await axios
-        .post(`http://68.178.207.95:3000/api/forms/one`, values )
+        .post(`${apiUrl}/api/forms/one`, values )
         .then((resp) => {
             debugger
             resetForm({values: ''});
@@ -29,7 +29,7 @@ export const RealtorBuilderApi = async (values, addToast, resetForm,setLoading, 
     setLoading(true);
     debugger
     await axios
-        .post(`http://68.178.207.95:3000/api/forms/two`, values )
+        .post(`${apiUrl}/api/forms/two`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -52,7 +52,7 @@ export const ThirdFormBuilderApi = async (values, addToast, setLoading, setCheck
     setLoading(true);
     debugger
     await axios
-        .post(`http://68.178.207.95:3000/api/forms/three`, values )
+        .post(`${apiUrl}/api/forms/three`, values )
         .then((resp) => {
             debugger
             setLoading(false);
@@ -82,7 +82,7 @@ export const VotingApi = async (body, addToast, setData, setLoading) =>{
     if(body !== ""){
       setLoading(true)
         await axios
-            .post(`http://68.178.207.95:3000/api/poll`, body )
+            .post(`${apiUrl}/api/poll`, body )
             .then((resp) => {
                 debugger
                 setData(resp?.data);
@@ -96,7 +96,7 @@ export const VotingApi = async (body, addToast, setData, setLoading) =>{
             });
     }else{
         await axios
-            .post(`http://68.178.207.95:3000/api/poll`, {} )
+            .post(`${apiUrl}/api/poll`, {} )
             .then((resp) => {
                 debugger
                 setLoading(false)
@@ -122,7 +122,7 @@ export const VotingApiFirst = async (body, addToast, setData,setLoading) =>{
     if(body !== ""){
         setLoading(true)
         await axios
-            .post(`http://68.178.207.95:3000/api/poll`, body )
+            .post(`${apiUrl}/api/poll`, body )
             .then((resp) => {
                 debugger
                 setData(resp?.data);

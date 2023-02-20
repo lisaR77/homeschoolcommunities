@@ -17,17 +17,17 @@ const FooterComponent = () => {
                 </h2>
 
                 <div className='footerContentPointerWrapper'>
-                    <div className='footerIconWrapper'>
-                        <ImPhone size={22} color={'#455467'} />
-                        <p >
-                            <a href="tel:+8019412815" >+801 - 941-2815</a>
-                        </p >
+                    {/*<div className='footerIconWrapper'>*/}
+                    {/*    <ImPhone size={22} color={'#455467'} />*/}
+                    {/*    <p>*/}
+                    {/*        <a href="tel:+8019412815" >+801 - 941-2815</a>*/}
+                    {/*    </p>*/}
 
-                    </div>
+                    {/*</div>*/}
                     <div className='footerIconWrapper'>
                         <FaEnvelope size={22} color={'#455467'} />
                         <p>
-                            <a href="mailto:lisa@homeschoolcommunities.org" > lisa@homeschoolcommunities.org </a>
+                            <a href="mailto:lisa@homeschoolcommunities.org" > info@homeschoolcommunities.org </a>
                         </p>
 
                     </div>
